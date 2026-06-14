@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMC 8 公益数学课堂 📐✨</title>
+    <style>
+        /* 全局可爱、干净的风格 */
+        :root {
+            --primary-color: #4f46e5;
+            --accent-color: #ff9f43;
+            --bg-color: #f0f7ff;
+            --card-bg: #ffffff;
+            --text-color: #2d3748;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-bottom: 60px;
+        }
+
+        /* 顶部欢迎横幅 */
+        header {
+            background: linear-gradient(135deg, #6ee7b7 0%, #3b82f6 100%);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* 主体容器 */
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* 通用卡片样式 */
+        .card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 25px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.05);
+            border: 2px solid #e2e8f0;
+            transition: transform 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* “关于我” 板块 */
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .profile-section {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.5rem;
+            color: white;
+            box-shadow: 0 4px 10px rgba(255, 159, 67, 0.3);
+        }
+
+        /* 课件下载板块列表 */
+        .course-list {
+            list-style: none;
+        }
+
+        .course-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px dashed #e2e8f0;
+        }
+
+        .course-item:last-child {
+            border-bottom: none;
+        }
+
+        .course-info h4 {
+            font-size: 1.1rem;
+            color: #1a202c;
+            margin-bottom: 4px;
+        }
+
+        .course-info p {
+            font-size: 0.9rem;
+            color: #718096;
+        }
+
+        /* 下载按钮 */
+        .download-btn {
+            background-color: var(--accent-color);
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(255, 159, 67, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .download-btn:hover {
+            background-color: #f39c12;
+            box-shadow: 0 6px 14px rgba(255, 159, 67, 0.4);
+        }
+
+        /* 问答板块 */
+        .faq-item {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #edf2f7;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .question {
+            font-weight: bold;
+            color: #1a202c;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: flex-start;
+            gap: 5px;
+        }
+
+        .answer {
+            color: #4a5568;
+            padding-left: 24px;
+            font-size: 0.95rem;
+        }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            color: #a0aec0;
+            font-size: 0.85rem;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部 Banner -->
+    <header>
+        <h1>AMC 8 公益数学课堂 📐🌟</h1>
+        <p>用有趣的思维，解锁奇妙的数学世界！欢迎小学生朋友们~</p>
+    </header>
+
+    <div class="container">
+
+        <!-- 关于我 板块 -->
+        <div class="card">
+            <div class="card-title">👋 关于我</div>
+            <div class="profile-section">
+                <div class="avatar">👨‍💻</div>
+                <div>
+                    <p style="font-weight: bold; font-size: 1.1rem; margin-bottom: 5px;">你的数学学长</p>
+                    <p style="color: #4a5568; font-size: 0.95rem;">
+                        嗨！我是一名高中生。我非常喜欢数学，建立这个网站是为了把好玩的 AMC 8（美国数学竞赛）知识分享给学弟学妹们。
+                        让我们一起在趣味题目中锻炼逻辑思维吧！
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 课件下载 板块 -->
+        <div class="card">
+            <div class="card-title">📚 课件与资料下载</div>
+            <ul class="course-list">
+                <li class="course-item">
+                    <div class="course-info">
+                        <h4>第 1 讲：奇偶性与质因数分解</h4>
+                        <p>知识点：数的整除特征、奇偶分析、核心例题解析</p>
+                    </div>
+                    <!-- 提示：把下面的 # 替换成你的云盘分享链接 -->
+                    <a href="#" target="_blank" class="download-btn">点击获取 📥</a>
+                </li>
+                <li class="course-item">
+                    <div class="course-info">
+                        <h4>第 2 讲：巧算与等差数列</h4>
+                        <p>知识点：高斯求和延伸、分组法、等差数列通项公式</p>
+                    </div>
+                    <a href="#" target="_blank" class="download-btn">点击获取 📥</a>
+                </li>
+                <li class="course-item">
+                    <div class="course-info">
+                        <h4>第 3 讲：几何图形的高级求积</h4>
+                        <p>知识点：割补法、蝴蝶定理初步、阴影面积挑战</p>
+                    </div>
+                    <a href="#" target="_blank" class="download-btn">点击获取 📥</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 问题和答复 (Q&A) 板块 -->
+        <div class="card">
+            <div class="card-title">❓ 常见问题与答复</div>
+            
+            <div class="faq-item">
+                <div class="question">📌 Q1: 这个课程是免费的吗？适合几年级的小朋友？</div>
+                <div class="answer">是的, 这是完全公益且免费的课程！主要适合小学 4-6 年级、对数学感兴趣或者想挑战 AMC 8 的同学们。</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">📌 Q2: 课件打不开或者链接失效了怎么办？</div>
+                <div class="answer">如果遇到课件无法下载的情况，可以让爸爸妈妈通过底部的联系邮箱发邮件告诉我，我会第一时间更新链接！</div>
+            </div>
+
+            <div class="faq-item">
+                <div class="question">📌 Q3: 课后有不懂的题目去哪里提问呢？</div>
+                <div class="answer">每次课后都有答疑时间。平时遇到不会的题，也可以把题目拍照发到我们的学习交流群里，学长看到就会回复哦。</div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer>
+            <p>© 2026 AMC 8 公益数学课堂 | 用心做教育，用爱传知识</p>
+            <p>联系邮箱：your_email@example.com (请替换成你的邮箱)</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
