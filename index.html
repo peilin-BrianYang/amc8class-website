@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMC 8 公益数学课堂 📐✨</title>
+    <title>一见公益数学课堂 📐✨</title>
     <style>
         /* 全局可爱、干净的风格 */
         :root {
@@ -22,7 +22,14 @@
         }
 
         body {
-            background-color: var(--bg-color);
+            /* 引入你的背景图片 */
+            background-image: url('background.jpg'); 
+            
+            /* 下面这三行是让背景变好看的“魔法咒语” */
+            background-size: cover;          /* 让图片按比例放大，铺满整个屏幕 */
+            background-position: center;     /* 让图片居中显示 */
+            background-attachment: fixed;    /* 网页上下滚动时，背景图片固定不动，会有很高级的视觉效果！ */
+            
             color: var(--text-color);
             line-height: 1.6;
             padding-bottom: 60px;
@@ -195,7 +202,7 @@
 
     <!-- 顶部 Banner -->
     <header>
-        <h1>AMC 8 公益数学课堂 📐🌟</h1>
+        <h1>一见公益数学课堂 📐🌟</h1>
         <p>用有趣的思维，解锁奇妙的数学世界！欢迎小学生朋友们~</p>
     </header>
 
@@ -205,11 +212,13 @@
         <div class="card">
             <div class="card-title">👋 关于我</div>
             <div class="profile-section">
-                <div class="avatar">👨‍💻</div>
+                <div class="avatar" style="padding: 0; overflow: hidden;">
+                    <img src="avatar.jpg" alt="我" style="width: 100%; height: 100%; object-fit: cover;">
+                </div>
                 <div>
                     <p style="font-weight: bold; font-size: 1.1rem; margin-bottom: 5px;">你的数学学长</p>
                     <p style="color: #4a5568; font-size: 0.95rem;">
-                        嗨！我叫杨霈霖，英文名Brian，是一名高中生。我非常喜欢数学，这个网站是我的 AMC 8（美国数学竞赛）课程里的课件待的地方
+                        嗨！我叫杨霈霖，英文名Brian，是一名高中生。我非常喜欢数学你可以在这个网站里找到我们兴趣班的课件。
                     </p>
                 </div>
             </div>
